@@ -31,7 +31,7 @@ e explica cada uma para dois públicos ao mesmo tempo:
 
 | Nível | O que é | Público |
 |---|---|---|
-| **1 — Visão geral** | Um único documento cobrindo todas as 22 metodologias, sem fórmulas | Leigo em estatística |
+| **1 — Visão geral** | Um único documento cobrindo todas as 23 metodologias, sem fórmulas | Leigo em estatística |
 | **2 — Metodologia por metodologia** | Um documento por método: intuição, exemplo simples, quando usar, cuidados | Alguém com alguma familiaridade com dados |
 | **3 — Completo** | Formulação matemática, suposições, hipóteses, interpretação e limitações | Analistas, cientistas de dados, pesquisadores |
 
@@ -96,6 +96,7 @@ Agrupadas pelo tipo de pergunta que respondem no portfólio.
 |---|---|---|
 | Regressão de Poisson com efeitos fixos | [PT](docs/pt/metodologias/poisson-regression.md) · [EN](docs/en/methodologies/poisson-regression.md) | [PT](docs/pt/completo/poisson-regression.md) · [EN](docs/en/complete/poisson-regression.md) |
 | Tendência por mínimos quadrados ponderados | [PT](docs/pt/metodologias/wls-trend.md) · [EN](docs/en/methodologies/wls-trend.md) | [PT](docs/pt/completo/wls-trend.md) · [EN](docs/en/complete/wls-trend.md) |
+| Regressão logística | [PT](docs/pt/metodologias/logistic-regression.md) · [EN](docs/en/methodologies/logistic-regression.md) | [PT](docs/pt/completo/logistic-regression.md) · [EN](docs/en/complete/logistic-regression.md) |
 
 ### Estrutura
 
@@ -153,7 +154,7 @@ each one for two audiences at once:
 
 | Level | What it is | Audience |
 |---|---|---|
-| **1 — Overview** | One document covering all 22 methodologies, no formulas | Statistics layperson |
+| **1 — Overview** | One document covering all 23 methodologies, no formulas | Statistics layperson |
 | **2 — Methodology by methodology** | One document per method: intuition, simple example, when to use it, caveats | Someone with some data familiarity |
 | **3 — Complete** | Mathematical formulation, assumptions, hypotheses, interpretation, limitations | Analysts, data scientists, researchers |
 

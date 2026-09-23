@@ -464,3 +464,31 @@ hipótese de estabilidade.
 tende a ser largo, e a maioria das unidades acaba classificada como
 "estável" simplesmente por falta de dados suficientes para decidir — isso não
 é o mesmo que dizer que elas de fato não mudam.
+
+---
+
+## 23. Regressão logística
+
+**A pergunta:** dado o valor de uma ou mais variáveis, qual é a probabilidade
+de um desfecho binário acontecer — um cliente cancelar, um time cair, um
+paciente responder a um tratamento?
+
+**A ideia:** em vez de prever diretamente um número entre 0 e 1 (o que uma
+regressão linear comum não garante), a regressão logística modela o
+logaritmo da razão de chances do desfecho como uma combinação linear das
+variáveis explicativas. Essa transformação garante que a probabilidade
+prevista, ao ser convertida de volta, fique sempre entre 0 e 1 — o resultado
+é uma curva em formato de S, achatada nos extremos e mais inclinada no meio.
+
+**O que o resultado significa:** o coeficiente de cada variável, transformado
+adequadamente, vira uma razão de chances — "cada ponto a mais nessa variável
+multiplica a chance do desfecho por X". A qualidade do modelo como
+classificador é avaliada à parte, tipicamente pela AUC (o quanto o modelo
+separa quem teve o desfecho de quem não teve) e por validação fora da
+amostra.
+
+**O que ele não diz:** quando uma variável separa quase perfeitamente as duas
+classes, a estimativa fica instável (quase-separação) — o sinal do efeito
+continua valendo, mas o intervalo de confiança exige cautela. E um coeficiente
+estatisticamente significativo não garante, sozinho, que o modelo classifique
+bem — são perguntas diferentes.

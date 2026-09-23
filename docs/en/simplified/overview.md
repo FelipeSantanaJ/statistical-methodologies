@@ -464,3 +464,30 @@ stable hypothesis.
 tends to be wide, and most units end up classified as "stable" simply for
 lack of enough data to decide — that's not the same as saying they truly don't
 change.
+
+---
+
+## 23. Logistic regression
+
+**The question:** given the value of one or more variables, what's the
+probability that a binary outcome happens — a customer cancels, a team gets
+relegated, a patient responds to a treatment?
+
+**The idea:** instead of predicting a number between 0 and 1 directly (which
+an ordinary linear regression doesn't guarantee), logistic regression models
+the log odds of the outcome as a linear combination of the explanatory
+variables. That transformation guarantees the predicted probability, once
+converted back, always stays between 0 and 1 — the result is an S-shaped
+curve, flat at the extremes and steeper in the middle.
+
+**What the result means:** each variable's coefficient, properly transformed,
+becomes an odds ratio — "each extra point on this variable multiplies the
+odds of the outcome by X." The model's quality as a classifier is assessed
+separately, typically via AUC (how well the model separates who had the
+outcome from who didn't) and out-of-sample validation.
+
+**What it doesn't tell you:** when a variable almost perfectly separates the
+two classes, the estimate becomes unstable (quasi-separation) — the direction
+of the effect still holds, but its confidence interval calls for caution. And
+a statistically significant coefficient doesn't by itself guarantee the model
+classifies well — those are different questions.
