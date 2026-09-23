@@ -115,6 +115,8 @@ statistical-methodologies/
 ├── assets/
 │   ├── figstyle.py         # estilo compartilhado das figuras
 │   └── figures/             # figuras ilustrativas (dados sintéticos)
+├── scripts/
+│   └── build_pdfs.py        # gera os 6 PDFs a partir dos .md (pandoc + xelatex)
 └── pdf/
     ├── pt/                   # visao-geral, metodologias-nivel2, metodologias-nivel3
     └── en/                   # overview, methodologies-level2, methodologies-level3
@@ -124,6 +126,15 @@ statistical-methodologies/
 
 - [Nível 1 (PT)](pdf/pt/visao-geral.pdf) · [Nível 2 (PT)](pdf/pt/metodologias-nivel2.pdf) · [Nível 3 (PT)](pdf/pt/metodologias-nivel3.pdf)
 - [Level 1 (EN)](pdf/en/overview.pdf) · [Level 2 (EN)](pdf/en/methodologies-level2.pdf) · [Level 3 (EN)](pdf/en/methodologies-level3.pdf)
+
+Gerados por `scripts/build_pdfs.py` (requer [pandoc](https://pandoc.org) e um
+motor LaTeX como o [MiKTeX](https://miktex.org), que baixa os pacotes que
+faltarem na primeira compilação):
+
+```bash
+python scripts/build_pdfs.py            # os dois idiomas
+python scripts/build_pdfs.py pt         # só um idioma
+```
 
 ### Sobre os exemplos
 
@@ -182,6 +193,8 @@ statistical-methodologies/
 ├── assets/
 │   ├── figstyle.py         # shared figure style
 │   └── figures/             # illustrative figures (synthetic data)
+├── scripts/
+│   └── build_pdfs.py        # builds the 6 PDFs from the .md files (pandoc + xelatex)
 └── pdf/
     ├── pt/                   # visao-geral, metodologias-nivel2, metodologias-nivel3
     └── en/                   # overview, methodologies-level2, methodologies-level3
@@ -191,6 +204,15 @@ statistical-methodologies/
 
 - [Level 1 (EN)](pdf/en/overview.pdf) · [Level 2 (EN)](pdf/en/methodologies-level2.pdf) · [Level 3 (EN)](pdf/en/methodologies-level3.pdf)
 - [Nível 1 (PT)](pdf/pt/visao-geral.pdf) · [Nível 2 (PT)](pdf/pt/metodologias-nivel2.pdf) · [Nível 3 (PT)](pdf/pt/metodologias-nivel3.pdf)
+
+Built by `scripts/build_pdfs.py` (requires [pandoc](https://pandoc.org) and a
+LaTeX engine such as [MiKTeX](https://miktex.org), which downloads any missing
+packages on the first build):
+
+```bash
+python scripts/build_pdfs.py            # both languages
+python scripts/build_pdfs.py pt         # a single language
+```
 
 ### About the examples
 
